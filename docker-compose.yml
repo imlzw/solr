@@ -1,0 +1,11 @@
+version: '2'
+services:
+    solr:
+        image: imlzw/solr
+        ports:
+            - "8983:8983"
+        volumes:
+            - /c/docker-data/solr/dsearch:/opt/solr/server/solr/home
+        environment:
+            - TZ=Asia/Shanghai
+            - SOLR_HOME=/opt/solr/server/solr/home
